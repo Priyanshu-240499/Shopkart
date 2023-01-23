@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+}
+.uppernav{
+    background: linear-gradient(rgba(107, 142, 35,1),rgba(107, 142, 35,0.9),rgba(107, 142, 35,0.8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    padding: 1%;
+}
+.uppernav div{
+    margin: 0px 7px;
+    height: 100%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.inp{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    /* border: 2px solid green; */
+    border-radius: 15px;
+}
+.inp input{
+    width: 85%;
+    height: 87%;
+    border: none;
+    font-size: larger;
+    text-align: center;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.inp button{
+    width: 15%;
+    height: 92%;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+}
+.cart{
+    display: flex;
+    align-items: center;
+}
+.cart button{
+    padding: 0 10px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    height: 90%;
+}
+input:focus{
+    outline: none;
+}
+button{
+    border-radius: 8px;
+}

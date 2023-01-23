@@ -1,0 +1,13 @@
+.home{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.home-sub{
+    /* border: 1px solid black; */
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
