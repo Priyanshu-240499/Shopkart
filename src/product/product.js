@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import Categorycard from '../Components/Category/categorycard';
+import Nav from '../Components/Navbar/nav';
 function Product() {
     const productId=useParams().id;
     const[productData,setProductData]=useState([]);
@@ -10,9 +11,12 @@ function Product() {
             .then(json=>setProductData(json))
     },[productData])
   return (
+    <>
+    <Nav/>
     <div className='Category'>
     {productData.length===0?<h1>Loading...</h1>:<Categorycard key={productData.id} data={productData}/>}
     </div>
+    </>
   )
 }
 

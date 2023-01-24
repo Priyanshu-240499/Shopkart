@@ -1,0 +1,82 @@
+
+.login-page{
+    background-image: url("https://wallpaperaccess.com/full/3967046.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 50%;
+    height: 50%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0px 0px 8px white;
+    border-radius: 7px;
+    color: white;
+    background-color: rgba(0, 0, 0,0.5);
+}
+.form input:focus{
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 8px orange;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 25%;
+}
+.email h3{
+    margin: 0;
+}
+.email input{
+    width: 80%;
+    height: 35%;
+}
+.password{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.password h3{
+    margin: 0;
+}
+.password input{
+    width: 80%;
+    height: 35%;
+}
+.error{
+    text-align: center;
+    color: red;
+}
+.login{
+    height: 15% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login button{
+    width: 40%;
+    height: 70%;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-size: larger;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px white;
+    padding: 1% 0%;
+}
+
+@media screen and (max-width:500px) {
+    .form{
+        height: 40%;
+    }
+}

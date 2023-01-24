@@ -2,8 +2,9 @@ import React from 'react'
 
 function Categorycard({data:{image,title,category,description
 ,price,rating,id}}) {
-  function hanleOnClick(){
+  function hanleOnClick(e){
   alert("hi");
+  e.stopPropagation();
   }
   return (
 

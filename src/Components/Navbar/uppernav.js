@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 function Uppernav() {
   return (
     <div className='uppernav'>
-      <Link to={{pathname:"/"}} className='logo'><h2>SHOPIFY</h2></Link>
+      <Link to={{pathname:"/home"}} className='logo'><h2>SHOPIFY</h2></Link>
       <div className='inp'>
         <input type="text" placeholder='Search'/>
         <button>{<FaSearch/>}</button>
