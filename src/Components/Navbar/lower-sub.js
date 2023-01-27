@@ -4,10 +4,11 @@ function LowerSub({src,name}) {
   
   return (
     <Link to={{pathname:`/category/${name}`}} className='nav-sub-card'>
+      {console.log("lowernav-sub** render is called")}
     <img
             src={src}
             width="75"
-            height="60"
+            height="80"
             alt="electronics"
           />
     <p>{name}</p>

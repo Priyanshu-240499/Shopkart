@@ -1,15 +1,28 @@
 import React from 'react'
-
+// const cartdata=[];
 function Categorycard({data:{image,title,category,description
 ,price,rating,id}}) {
   function hanleOnClick(e){
-  alert("hi");
+    fetch('https://fakestoreapi.com/carts',{
+      method:"POST",
+      body:JSON.stringify(
+          {
+              userId:1,
+              date:new Date(),
+              products:[{productId:{id},quantity:1}]
+          }
+      )
+  })
+      .then(res=>res.json())
+      .then(json=>console.log(json))
+
   e.stopPropagation();
   }
   return (
 
-      <div className='Category-sub'>
-        <div className='img'><img loading='lazy' src={image} alt={id} width="200px" height="300px"/><strong>Category: {category}</strong></div>
+      <div  className='Category-sub'>
+        {console.log("categorycard** render is called")}
+        <div  className='img'><img loading='lazy' src={image} alt={id} width="200px" height="300px"/><strong>Category: {category}</strong></div>
         <div className='title'>
             <div><h2>{title}</h2></div>
             <div><p>{description}</p></div>

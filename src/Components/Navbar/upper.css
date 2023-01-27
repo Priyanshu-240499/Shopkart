@@ -1,59 +1,58 @@
 *{
     margin: 0;
+    padding: 0;
 }
 .uppernav{
     background: linear-gradient(rgba(107, 142, 35,1),rgba(107, 142, 35,0.9),rgba(107, 142, 35,0.8));
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: 45px;
-    padding: 1%;
+    height: 4rem;
 }
-.uppernav div{
-    margin: 0px 7px;
-    height: 100%;
-}
+
 .logo{
     display: flex;
     align-items: center;
     color: white;
 }
-.inp{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    /* border: 2px solid green; */
-    border-radius: 15px;
-}
-.inp input{
-    width: 85%;
-    height: 87%;
-    border: none;
-    font-size: larger;
-    text-align: center;
-    border-radius: 15px 0px 0px 15px;
+.greeting{
+    color: white;
+    
 }
 
-.inp button{
+.nav-link{
+    height: 50%;
     width: 15%;
-    height: 92%;
-    border: none;
-    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
 }
 .cart{
-    display: flex;
-    align-items: center;
+    height: 100%;
 }
-.cart button{
+
+.logout{
+    
+    height: 100%;
+} 
+.logout>button,.cart>button{
     padding: 0 10px;
     background-color: darkgreen;
     color: white;
     border: none;
-    height: 90%;
+    height: 100%;
 }
-input:focus{
-    outline: none;
-}
+
 button{
     border-radius: 8px;
+}
+@media screen and (max-width: 500px) {
+    .uppernav{
+        justify-content: space-between
+    }
+    .nav-link{
+        width: 25%;
+    }
 }

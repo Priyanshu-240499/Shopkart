@@ -1,4 +1,5 @@
 import React,{useRef} from "react";
+import {motion} from 'framer-motion/dist/framer-motion'
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 sessionStorage.setItem("Email","priyanshoochoudhary@gmail.com");
@@ -23,11 +24,12 @@ function Login() {
             error.current.innerText="";
             navigate("/home");
         }
-        
+   
     }
   return (
     <div className="login-page">
-      <form className="form" onSubmit={formvalidation}>
+      {console.log("login render is called")}
+      <motion.form initial={{ opacity: 0, scale: 0.1 }} animate={{rotate:360,opacity: 1, scale: 1}} transition={{ duration: 1.5}} className="form" onSubmit={formvalidation}>
         <div className="email">
           <h3>Email: </h3>
           <input
@@ -48,11 +50,11 @@ function Login() {
             required
           />
         </div>
-        <div className="error" ref={error}></div>
+        <strong className="error" ref={error}></strong>
         <div className="login">
           <button>Login</button>
         </div>
-      </form>
+      </motion.form>
     </div>
   );
 }
