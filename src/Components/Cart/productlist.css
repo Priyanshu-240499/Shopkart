@@ -1,0 +1,36 @@
+.Products{
+    height: 5rem;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+    padding: 0% 1%;
+    background-color: gainsboro;
+}
+.delete-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 50px;
+}
+.delete-cart>button{
+    padding: 0 10px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    height: 100%;
+}
+.cart-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 600px) {
+    .Products{
+        width: 100%;
+    }
+}

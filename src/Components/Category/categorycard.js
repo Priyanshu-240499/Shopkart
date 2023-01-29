@@ -3,18 +3,21 @@ import React from 'react'
 function Categorycard({data:{image,title,category,description
 ,price,rating,id}}) {
   function hanleOnClick(e){
-    fetch('https://fakestoreapi.com/carts',{
-      method:"POST",
-      body:JSON.stringify(
-          {
-              userId:1,
-              date:new Date(),
-              products:[{productId:{id},quantity:1}]
-          }
-      )
-  })
-      .then(res=>res.json())
-      .then(json=>console.log(json))
+    fetch('https://sheet.best/api/sheets/882cbe2e-9fb7-4f3d-be5e-914412a24f68', {
+  method: 'POST', 
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    id:id,
+    image:image,
+    title:title,
+    price:price
+  }),
+})
+  .catch((error) => {
+    console.log(error);
+  });
 
   e.stopPropagation();
   }

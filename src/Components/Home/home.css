@@ -3,6 +3,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: rgba(220, 220, 220,0.5);
+    color: orange;
 }
 .home-title{
     margin: 1%;
@@ -14,4 +16,8 @@
     row-gap: 25px;
     column-gap: 10%;
     justify-content: center;
+}
+.noResults{
+    text-align: center;
+    color: orange;
 }

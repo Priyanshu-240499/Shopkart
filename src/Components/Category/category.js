@@ -3,7 +3,8 @@ import {useParams} from "react-router-dom";
 import Categorycard from './categorycard';
 import {useNavigate} from "react-router-dom";
 import "./category.css";
-import Nav from '../Navbar/nav';
+import Uppernav from '../Navbar/uppernav';
+import Lowernav from '../Navbar/Lowernav';
 import Loading from '../Loading/loading';
 let allData=[];
 function Category() {
@@ -53,7 +54,13 @@ function Category() {
   return (
     <>
     {console.log("category render is called")}
-    <Nav/>
+    
+   
+    {categorydata.length===0?<Loading/>:
+    <>
+    <Uppernav/>
+    <Lowernav/>
+    <div className='Category' >
     <div>
       <select defaultValue="All" onChange={datafilter}>
           <option>All</option>
@@ -61,9 +68,11 @@ function Category() {
           <option>100-500</option>
           <option>500+</option>
         </select></div>
-    <div className='Category' >
-    {categorydata.length===0?<Loading/>:categorydata.map(item=><div onClick={(e)=>{ productnavigate(`/product/${item.id}`)}} className='category-link' key={item.id}><Categorycard  data={item}/></div>)}
-    </div>
+    {
+    categorydata.map(item=><div onClick={(e)=>{ productnavigate(`/product/${item.id}`)}} className='category-link' key={item.id}><Categorycard  data={item}/></div>)
+    }
+    </div></>}
+    
     </>
   )
 }

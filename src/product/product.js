@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import Categorycard from '../Components/Category/categorycard';
-import Nav from '../Components/Navbar/nav';
+import Uppernav from '../Components/Navbar/uppernav';
+import Lowernav from '../Components//Navbar/Lowernav';
 import Loading from '../Components/Loading/loading';
 import {motion} from 'framer-motion/dist/framer-motion'
 function Product() {
@@ -15,7 +16,8 @@ function Product() {
   return (
     <>
     {console.log("loading product component")}
-    <Nav/>
+    <Uppernav/>
+    <Lowernav/>
     <motion.div className='Category' initial={{ opacity: 0, x:50 }} animate={{opacity: 1, x: 0}} transition={{ duration: 1}}>
     {productData.length===0?<Loading/>:<Categorycard key={productData.id} data={productData}/>}
     </motion.div>
