@@ -15,7 +15,6 @@ function Product() {
     },[])
   return (
     <>
-    {console.log("loading product component")}
     <Uppernav/>
     <Lowernav/>
     <motion.div className='Category' initial={{ opacity: 0, x:50 }} animate={{opacity: 1, x: 0}} transition={{ duration: 1}}>

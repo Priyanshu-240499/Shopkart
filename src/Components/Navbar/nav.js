@@ -4,7 +4,7 @@ import LowerSearch from './lower-search'
 function Nav() {
   return (
     <div>
-      {console.log("navbar is called...")}
+      
       <Uppernav/>
       <LowerSearch/>
     </div>

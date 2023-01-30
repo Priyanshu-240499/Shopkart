@@ -13,7 +13,6 @@ import {
 function App() {
   return (
     <div className="main">
-      {console.log("App render is called")}
       <BrowserRouter>
       <Routes>
       <Route path="/*" element={<Login/>} />
