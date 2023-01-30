@@ -2,10 +2,10 @@
     height: 5rem;
     width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin: 5px 0px;
-    padding: 0% 1%;
+    /* padding: 0% 1%; */
     background-color: gainsboro;
 }
 .delete-cart{
@@ -29,7 +29,7 @@
     margin: 0;
     padding: 0;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .Products{
         width: 100%;
     }

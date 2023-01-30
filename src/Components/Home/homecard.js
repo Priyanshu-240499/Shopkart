@@ -6,7 +6,7 @@ function Homecard({img,title,id}) {
  const productTitle=productTitleArray[0]+" "+productTitleArray[1]+" "+productTitleArray[2];
   return (
     <Link to={{pathname:`/product/${id}`}} className='home-card'>
-      <img loading="lazy" height="300px" width="200px" src={img} alt={productTitle} />
+      <img loading="lazy" className="all-products-home" src={img} alt={productTitle} />
       <p>{productTitle}</p>
     </Link>
   )

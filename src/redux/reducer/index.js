@@ -1,8 +1,10 @@
 import {combineReducers} from "redux";
-import filteredData from "./reducer1";
-import ConstAllData from "./reducer2";
+import filteredData from "./filteredData";
+import ConstAllData from "./ConstAllData";
+import CartData from "./cartData";
 const rootReducer =combineReducers({
     filteredData:filteredData,
-    ConstAllData:ConstAllData
+    ConstAllData:ConstAllData,
+    CartData:CartData
 })
 export default rootReducer;

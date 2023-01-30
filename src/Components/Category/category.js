@@ -7,6 +7,7 @@ import Uppernav from '../Navbar/uppernav';
 import Lowernav from '../Navbar/Lowernav';
 import Loading from '../Loading/loading';
 let allData=[];
+// Starting here ...............................
 function Category() {
   const productnavigate=useNavigate();
    const selectedCategory=useParams().category;
@@ -17,9 +18,9 @@ function Category() {
             .then(json=>{allData=json;setCategryData(json)})
    },[selectedCategory])
 
+  //  filtering data based on price....
    function datafilter(e) {
    const selectedfilter = e.target.value;
-  //  setCategryData(...allData);
     switch (selectedfilter) {
       case "All":
         setCategryData(allData);
@@ -52,10 +53,7 @@ function Category() {
   }
 
   return (
-    <>
-    {console.log("category render is called")}
-    
-   
+    <> 
     {categorydata.length===0?<Loading/>:
     <>
     <Uppernav/>

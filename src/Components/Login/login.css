@@ -78,5 +78,6 @@
 @media screen and (max-width:500px) {
     .form{
         height: 40%;
+        width: 90%;
     }
 }

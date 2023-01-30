@@ -12,3 +12,16 @@
 .home-card:hover{
     box-shadow: 0px 0px 5px black;
 }
+.all-products-home{
+    width:200px;
+    height:300px; 
+}
+@media screen and (max-width:538px) {
+    .all-products-home{
+        width:75px;
+        height:130px; 
+    }
+    .home-card{
+        width: 80px;
+    }
+}

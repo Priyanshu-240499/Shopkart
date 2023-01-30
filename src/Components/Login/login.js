@@ -29,7 +29,7 @@ function Login() {
   return (
     <div className="login-page">
       {console.log("login render is called")}
-      <motion.form initial={{ opacity: 0, scale: 0.1 }} animate={{opacity: 1, scale: 1}} transition={{ duration: 1.5}} className="form" onSubmit={formvalidation}>
+      <motion.form initial={{ opacity: 0, scale: 0.1 }} animate={{opacity: 1, scale: 1}} transition={{ duration: 1}} className="form" onSubmit={formvalidation}>
         <div className="email">
           <h3>Email: </h3>
           <input
