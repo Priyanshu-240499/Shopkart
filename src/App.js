@@ -5,6 +5,7 @@ import Category from './Components/Category/category';
 import Product from './product/product';
 import Login from './Components/Login/login';
 import Cart from './Components/Cart/cart';
+import OrderPlaced from './Components/OrderPlaced/OrderPlaced';
 import {
   BrowserRouter,
   Routes,
@@ -20,6 +21,7 @@ function App() {
         <Route path="/category/:category" element={<Category/>} />
         <Route path="/product/:id" element={<Product/>} />
         <Route path="/mycart" element={<Cart/>} />
+        <Route path="/OrderPlaced" element={<OrderPlaced/>} />
         </Routes>
         </BrowserRouter>
     </div>

@@ -6,10 +6,12 @@ import { BiRupee } from 'react-icons/bi'
 import "./cart.css";
 import "./productlist.css";
 import {useSelector,useDispatch} from "react-redux";
+import { useNavigate } from "react-router-dom";
 // Starting here...........................................
 function Cart() {
   const cartData = useSelector((state)=>state.CartData); 
   const dispatch=useDispatch();
+  const navigate=useNavigate();
 
   // Deleting row from cart 
   function handleDelete(index) {
@@ -19,7 +21,8 @@ function Cart() {
 
 // showing Order Placed after click to order button 
   function handleOnClick(){
-    dispatch({type:"AddedData", payload:[{price:0}]})
+    dispatch({type:"AddedData", payload:[]})
+    navigate("/OrderPlaced")
   }
   
 
@@ -33,8 +36,8 @@ function Cart() {
   return (
     <>
       {cartData.length === 0 ? (
-        <EmptyCart currentstring="Your Cart is Empty"/>
-      ) : (cartData[0].price===0?<EmptyCart currentstring="Hurray Order Placed"/>:<div className="cart"> 
+        <EmptyCart/>
+      ) : (<div className="cart"> 
       <h1 className="cart-summary">SUMMARY</h1>
       {cartData.map((item,ind)=>{ 
           return (
