@@ -1,4 +1,4 @@
-#Shopify Shoping App Using React
+# Shopify Shoping App Using React
 
 In this project I have made a small model of shoppng app.We have different components over here that are login page, home page, navbar, category, cart, and product component.Some tools and tech used are listed below
 
